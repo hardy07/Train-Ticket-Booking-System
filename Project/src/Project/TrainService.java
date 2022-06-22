@@ -56,9 +56,6 @@ public class TrainService {
 
         }
     
-    public TrainService() {
-    	super();
-    	}
     public static Train findTrain(int trainNumber) {
     	Train temp = null;
     	for(Train t : allTrains) {
@@ -87,7 +84,8 @@ public class TrainService {
     		System.out.println("Train.No.\tTrain Name\tFrom Station\tTo Station\tDoj\tSeats Available\tFare");
     		System.out.println();
     		for(Train t : searchTrainList) {
-    			System.out.printf("%4d%20s%15s%15s%12s%4d%5d",t.getTrainNumber(),t.getTrainName(),t.getFromStation(),t.getToStation(),t.getDoj(),t.getSeatsAvailable(),t.getFare());
+    			System.out.printf("%4d%20s%12s%17s%18s%7d%13d",t.getTrainNumber(),t.getTrainName(),t.getFromStation(),
+    					t.getToStation(),t.getDoj(),t.getSeatsAvailable(),t.getFare());
     			System.out.println();
     			}
     		}
